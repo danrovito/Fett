@@ -1,14 +1,14 @@
-<?php 
+<?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::create(__DIR__ . '/../');
+$dotenv = Dotenv\Dotenv::create(__DIR__.'/../');
 $dotenv->load();
 
 $app = new Slim\App([
     'settings' => [
         'displayErrorDetails' => getenv('APP_DEBUG') === 'true',
-        'app' => [
+        'app'                 => [
             'name' => getenv('APP_NAME'),
         ],
     ],
@@ -16,4 +16,4 @@ $app = new Slim\App([
 
 $container = $app->getContainer();
 
-require_once __DIR__ . '/../routes/web.php';
+require_once __DIR__.'/../routes/web.php';
