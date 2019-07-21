@@ -7,10 +7,10 @@ $dotenv->load();
 
 $app = new Slim\App([
     'settings' => [
-        'displayErrorDetails' => getenv('APP_DEBUG') === 'true',
+        'displayErrorDetails' => env('APP_DEBUG') === 'true',
         'app'                 => [
-            'name' => getenv('APP_NAME'),
-        ],
+            'name' => env('APP_NAME'),
+        ]
     ],
 ]);
 

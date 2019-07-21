@@ -6,6 +6,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return 'Fett 1.0';
+        return env('APP_NAME', "Fett");
     }
 }
